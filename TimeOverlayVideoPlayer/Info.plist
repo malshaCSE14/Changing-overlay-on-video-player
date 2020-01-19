@@ -53,6 +53,12 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>This app requires access to the camera </string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>This app requires access to the microphone</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>This app wants to save the video in your photo library</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

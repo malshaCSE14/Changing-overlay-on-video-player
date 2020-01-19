@@ -1,24 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HTS-Xf-FfX">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="PvG-gy-yMT">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="HTS-Xf-FfX" customClass="ViewController" customModule="video_player" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r9m-68-3mb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FN7-y7-hET">
+                                <rect key="frame" x="60" y="425.66666666666669" width="294" height="45"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="51E-Sf-Ghq"/>
+                                </constraints>
+                                <state key="normal" title="WATCH VIDEO">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapWatchVideo:" destination="HTS-Xf-FfX" eventType="touchUpInside" id="EGA-CO-aG6"/>
+                                </connections>
+                            </button>
+                            <view hidden="YES" alpha="0.60000002384185791" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rbM-RA-Zf2">
+                                <rect key="frame" x="82" y="194" width="250" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xt0-1S-pc7">
+                                        <rect key="frame" x="10" y="9" width="230" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yt7-rR-R57">
+                                <rect key="frame" x="60" y="350.66666666666669" width="294" height="45"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="7uO-GY-FJ1"/>
+                                </constraints>
+                                <state key="normal" title="RECORD VIDEO">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapRecordVideo:" destination="HTS-Xf-FfX" eventType="touchUpInside" id="r5o-gg-fjv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="FN7-y7-hET" firstAttribute="leading" secondItem="Vgs-ly-XXT" secondAttribute="leading" constant="60" id="3Yt-Ob-bAY"/>
+                            <constraint firstItem="yt7-rR-R57" firstAttribute="leading" secondItem="Vgs-ly-XXT" secondAttribute="leading" constant="60" id="3kw-y9-eiA"/>
+                            <constraint firstItem="FN7-y7-hET" firstAttribute="top" secondItem="yt7-rR-R57" secondAttribute="bottom" constant="30" id="9Lc-gx-89s"/>
+                            <constraint firstItem="Vgs-ly-XXT" firstAttribute="trailing" secondItem="FN7-y7-hET" secondAttribute="trailing" constant="60" id="D1g-MG-gyW"/>
+                            <constraint firstItem="FN7-y7-hET" firstAttribute="centerY" secondItem="r9m-68-3mb" secondAttribute="centerY" id="UbV-Zf-w8P"/>
+                            <constraint firstItem="Vgs-ly-XXT" firstAttribute="trailing" secondItem="yt7-rR-R57" secondAttribute="trailing" constant="60" id="WSF-IT-vDe"/>
+                            <constraint firstItem="yt7-rR-R57" firstAttribute="centerX" secondItem="r9m-68-3mb" secondAttribute="centerX" id="ceV-AM-TeK"/>
+                            <constraint firstItem="FN7-y7-hET" firstAttribute="centerX" secondItem="r9m-68-3mb" secondAttribute="centerX" id="vlk-AS-tCZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Vgs-ly-XXT"/>
                     </view>
+                    <connections>
+                        <outlet property="labelTime" destination="xt0-1S-pc7" id="c8n-l4-xXH"/>
+                        <outlet property="overlayBackgroundView" destination="rbM-RA-Zf2" id="UUf-sz-k7q"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZWK-0e-YZw" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-79.710144927536234" y="133.25892857142856"/>
         </scene>
     </scenes>
 </document>
